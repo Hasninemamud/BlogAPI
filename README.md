@@ -1,12 +1,12 @@
 
-# 📖 BlogApp MVP
+# BlogApp MVP
 
 A **full-stack blog application** built with **Django REST Framework (backend)** and **React (frontend)**.  
 Includes authentication, CRUD for posts, comments, and a **rich text editor** for writing formatted posts.  
 
----
 
-## 🚀 Features
+
+## Features
 
 ### Core MVP
 - ✅ **User Authentication**
@@ -17,18 +17,8 @@ Includes authentication, CRUD for posts, comments, and a **rich text editor** fo
   - Upload optional images
 - ✅ **Comments**
   - Add, view, and delete own comments
-- ✅ **Rich Text Editor**
-  - Create and edit posts with formatting (headings, bold, italic, links, lists)
 
-### Post-MVP (Nice-to-Have)
-- 👍 Likes & Reactions  
-- 👍 Categories & Tags  
-- 👍 Search & Pagination  
-- 👍 Profile customization (bio, avatar)  
-
----
-
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 
@@ -52,7 +42,7 @@ BlogAPI/
 
 ---
 
-## ⚙️ Backend Setup (Django + DRF)
+##  Backend Setup (Django + DRF)
 
 ### 1. Create Virtual Environment
 
@@ -104,7 +94,7 @@ Backend will run at: **[http://127.0.0.1:8000](http://127.0.0.1:8000)**
 
 ---
 
-## 🎨 Frontend Setup (React + Vite)
+## Frontend Setup (React + Vite)
 
 ### 1. Install Dependencies
 
@@ -150,7 +140,7 @@ Frontend will run at: **[http://127.0.0.1:5173](http://127.0.0.1:5173)**
 
 
 
-> 💡 Convert BlockNote JSON to HTML on the backend before sending to frontend.
+>  Convert BlockNote JSON to HTML on the backend before sending to frontend.
 
 
 ## ✅ Deployment Notes
@@ -164,7 +154,7 @@ Frontend will run at: **[http://127.0.0.1:5173](http://127.0.0.1:5173)**
 
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Backend**: Django, Django REST Framework, PostgreSQL
 * **Frontend**: React 19 (Vite), Tailwind CSS, BlockNote Editor
@@ -172,7 +162,7 @@ Frontend will run at: **[http://127.0.0.1:5173](http://127.0.0.1:5173)**
 
 
 
-## 📌 Next Steps
+##  Next Steps
 
 * [ ] Add Likes/Reactions
 * [ ] Add Categories & Tags
@@ -181,9 +171,5 @@ Frontend will run at: **[http://127.0.0.1:5173](http://127.0.0.1:5173)**
 
 
 
-Developed with ❤️ using Django & React.
 
-```
-
----
 
