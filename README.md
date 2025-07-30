@@ -1,8 +1,4 @@
-Perfect 👍 — below is a ready-to-use **`README.md`** in proper Markdown format for your BlogApp project.
 
-Save this as `README.md` in your project root.
-
-```markdown
 # 📖 BlogApp MVP
 
 A **full-stack blog application** built with **Django REST Framework (backend)** and **React (frontend)**.  
@@ -152,86 +148,10 @@ npm run dev
 
 Frontend will run at: **[http://127.0.0.1:5173](http://127.0.0.1:5173)**
 
----
 
-## ✍️ Creating a Post with Rich Text Editor
-
-In `src/pages/CreatePost.jsx`:
-
-```jsx
-import { useState } from "react";
-import API from "../services/api";
-import { useNavigate } from "react-router-dom";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
-import "@blocknote/core/style.css";
-
-function CreatePost() {
-  const [form, setForm] = useState({ title: "", content: [] });
-  const [image, setImage] = useState(null);
-  const navigate = useNavigate();
-  const editor = useBlockNote({
-    onChange: (ed) => setForm({ ...form, content: ed.topLevelBlocks }),
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("title", form.title);
-    formData.append("content", JSON.stringify(form.content));
-    if (image) formData.append("image", image);
-
-    API.post("blog/posts/", formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    }).then(() => navigate("/"));
-  };
-
-  return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-4">Create New Post</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          placeholder="Title"
-          value={form.title}
-          onChange={(e) => setForm({ ...form, title: e.target.value })}
-          className="block w-full border rounded p-2"
-          required
-        />
-        <BlockNoteView editor={editor} className="h-60" />
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
-        <button className="bg-green-600 text-white px-4 py-2 rounded w-full">
-          Create Post
-        </button>
-      </form>
-    </div>
-  );
-}
-
-export default CreatePost;
-```
-
----
-
-## 🔍 Rendering Rich Text Content
-
-In `PostDetail.jsx`:
-
-```jsx
-import DOMPurify from "dompurify";
-
-<div
-  className="prose max-w-none"
-  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content_html) }}
-></div>
-```
 
 > 💡 Convert BlockNote JSON to HTML on the backend before sending to frontend.
 
----
 
 ## ✅ Deployment Notes
 
@@ -242,7 +162,7 @@ import DOMPurify from "dompurify";
   * Frontend → Vercel or Netlify
 * Configure **CORS** with `django-cors-headers`
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -250,7 +170,7 @@ import DOMPurify from "dompurify";
 * **Frontend**: React 19 (Vite), Tailwind CSS, BlockNote Editor
 * **Auth**: JWT / Session-based
 
----
+
 
 ## 📌 Next Steps
 
@@ -259,9 +179,7 @@ import DOMPurify from "dompurify";
 * [ ] Add Search + Pagination
 * [ ] Add Profile customization (bio, avatar)
 
----
 
-## 👨‍💻 Author
 
 Developed with ❤️ using Django & React.
 
