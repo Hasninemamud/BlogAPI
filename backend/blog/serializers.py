@@ -4,7 +4,7 @@ from .models import Post, Comment
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')
     comments_count = serializers.IntegerField(read_only=True)
-    image = serializers.ImageField(use_url=True)
+    image = serializers.ImageField(required=False, allow_null=True)
 
     class Meta:
         model = Post
